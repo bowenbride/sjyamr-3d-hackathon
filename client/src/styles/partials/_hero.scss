@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 41px 65px 0 65px;
   }
 
   &__avatar {
@@ -14,6 +15,7 @@
     height: 40px;
     background-color: white;
     border-radius: 50%;
+    border: solid 1px grey;
   }
   &__topbar {
     display: flex;
@@ -22,11 +24,17 @@
     &--list {
       list-style-type: none;
       display: flex;
-      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    &--item {
+      margin-left: 47px;
+      font-weight: bold;
     }
   }
 
   &__header {
-    margin-top: 13rem;
+    margin-top: 11.5rem;
+    font-weight: 100;
   }
 }

@@ -13,6 +13,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 41px 65px 0 65px;
 }
 
 .hero__avatar {
@@ -20,6 +21,7 @@
   height: 40px;
   background-color: white;
   border-radius: 50%;
+  border: solid 1px grey;
 }
 
 .hero__topbar {
@@ -35,11 +37,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  margin-left: auto;
+}
+
+.hero__topbar--item {
+  margin-left: 47px;
+  font-weight: bold;
 }
 
 .hero__header {
-  margin-top: 13rem;
+  margin-top: 11.5rem;
+  font-weight: 100;
 }
 /*# sourceMappingURL=main.css.map */

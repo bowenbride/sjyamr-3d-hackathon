@@ -7,17 +7,26 @@ export default class Home extends Component {
     return (
       <div className="home">
         <Hero />
-        <div className="home__destination">
-          <h1 className="home__destination--header">Select your destination</h1>
-          <div className="home__destination--item"></div>
-        </div>
-        <div className="home__cuisine">
-          <h1 className="home__cuisine--header">CHOOSE A CUISINE TYPE</h1>
-          <div className="home__cuisine--selector"></div>
-        </div>
-        <div className="home__result">
-          <h1 className="home__result--header">RESTAURANTS AVAILABLE WITH</h1>
-          <div className="home__result--return"></div>
+        <div className="home__wrapper">
+          <div className="home__destination">
+            <h1 className="home__destination--header">
+              Select your destination
+            </h1>
+            <div className="home__destination--wrapper">
+              <div className="home__destination--item">PLACEHOLDER</div>
+              <div className="home__destination--item">PLACEHOLDER</div>
+              <div className="home__destination--item">PLACEHOLDER</div>
+              <div className="home__destination--item">PLACEHOLDER</div>
+            </div>
+          </div>
+          <div className="home__cuisine">
+            <h1 className="home__cuisine--header">CHOOSE A CUISINE TYPE</h1>
+            <div className="home__cuisine--selector">PLACEHOLDER</div>
+          </div>
+          <div className="home__result">
+            <h1 className="home__result--header">RESTAURANTS AVAILABLE WITH</h1>
+            <div className="home__result--return"></div>
+          </div>
         </div>
       </div>
     );

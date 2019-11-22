@@ -49,4 +49,31 @@
   margin-top: 11.5rem;
   font-weight: 100;
 }
+
+.home__wrapper {
+  margin: 41px 65px 0 65px;
+}
+
+.home__cuisine--selector {
+  width: 100%;
+  height: 494px;
+  background-color: lightgray;
+  border-radius: 6px;
+}
+
+.home__destination--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.home__destination--item {
+  min-width: 436px;
+  min-height: 232px;
+  background-color: lightgray;
+  border-radius: 6px;
+  margin-right: 42px;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

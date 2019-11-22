@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AEAA,AAAA,YAAY,CAAC;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;CAKzB;;AAHE,AAAD,gBAAK,CAAC;EACJ,UAAU,EAAE,UAAU;CACvB;;AAGH,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,eAAe,EAAE,aAAa;CAC/B;;AAED,AAAA,SAAS,CAAC;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,aAAa,EAAE,GAAG;CACnB",
     "sources": [
         "main.scss",
-        "partials/_breakpoints.scss"
+        "partials/_breakpoints.scss",
+        "partials/_cities.scss"
     ],
     "names": [],
     "file": "main.css"

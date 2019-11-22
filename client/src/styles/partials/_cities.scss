@@ -1,0 +1,20 @@
+.select-city {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__h1 {
+    align-self: flex-start;
+  }
+}
+
+.img-container {
+  display: flex;
+  width: 50vw;
+  justify-content: space-between;
+}
+
+.city-img {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+}

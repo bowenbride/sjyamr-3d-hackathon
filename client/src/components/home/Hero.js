@@ -9,6 +9,9 @@ export default class Hero extends Component {
                         <img className="hero__topbar--img"/>
                         <h1 className="hero__topbar--about">ABOUT</h1>
                     </div>
+                    <div className="hero__headers">
+                        <h1>_____ PROVIDES YOU THE HIGHEST RATED RESTAURANTS IN YOUR CHOSEN CITY</h1>
+                    </div>
                 </div>
             </div>
         )

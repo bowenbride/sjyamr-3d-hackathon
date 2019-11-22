@@ -9,7 +9,9 @@ export default class Cities extends Component {
       <div className="select-city">
         <h1 className="select-city__h1">Choose City</h1>
         <div className="img-container">
+          <div className="city-img">
           <img className="city-img" src={newdel} alt="new delhi"></img>
+          </div>
           <img className="city-img" src={noida} alt="gurgaon"></img>
           <img className="city-img" src={gurgaon} alt="some city"></img>
         </div>

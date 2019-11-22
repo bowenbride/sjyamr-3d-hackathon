@@ -1,0 +1,55 @@
+.hero {
+  background-image: url("../assets/hero.jpg");
+  background-size: 100%;
+
+  &__container {
+    width: 1440px;
+    height: 583px;
+    opacity: 0.71;
+    background-color: #252525;
+  }
+
+  &__slogan {
+    align-self: center;
+    margin:150px 16vw;
+    width: 967px;
+    height: 183px;
+    font-family: Avenir;
+    font-size: 60px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.navbar {
+  background-color: black;
+  opacity: 0.71;
+  background-color: #252525;
+
+  &__list {
+    margin:0;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-end;
+    list-style: none;
+
+    &--item {
+      margin: 16px 5%;
+      height: 27px;
+      font-family: Avenir;
+      font-size: 20px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.2px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Nav from "./Nav";
 
 export default class Hero extends Component {
-    render() {
-        return (
-            <div className="hero">
-                <div className="hero__container">
-                    <div className="hero__topbar">
-                        <img className="hero__topbar--img"/>
-                        <h1 className="hero__topbar--about">ABOUT</h1>
-                    </div>
-                </div>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="hero">
+        <div className="hero__container">
+            <Nav />
+          <h1 className="hero__slogan">
+            Bringing you closer to local experiences
+          </h1>
+        </div>
+      </div>
+    );
+  }
 }

@@ -1,103 +1,105 @@
-import React, { Component } from "react";
-import  { Bar, Line, Pie } from "react-chartjs-2"
+import React, { PureComponent } from "react";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend
+} from "recharts";
 
-export default class Chart extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            chartData: {
-                labels: ['North Indian',
-                         'Chinese',
-                         'Fast Food',
-                         'Mughlai',
-                         'Bakery',
-                         'South Indian',
-                         'Street Food',
-                         'Desserts',
-                         'Italian',
-                         'Continental',
-                         'Cafe',
-                         'Mithai',
-                         'Pizza',
-                         'Ice Cream',
-                         'Beverages',
-                         'American',
-                         'Thai',
-                         'Biryani',
-                         'Asian',
-                         'Burger',
-                         'Healthy Food',
-                         'Raw Meats',
-                         'European',
-                         'Finger Food',
-                         'Mexican',
-                         'Salad',
-                         'Japanese',
-                         'Lebanese',
-                         'Mediterranean',
-                         'Seafood',
-                         'Tibetan',
-                         'Tea'],
-                datasets:[{
-                    label: 'Restaurants',
-                    data: [
-                        2425,
-                        1638,
-                        1304,
-                        628,
-                        465,
-                        411,
-                        411,
-                        383,
-                        376,
-                        373,
-                        325,
-                        282,
-                        197,
-                        148,
-                        123,
-                        116,
-                        112,
-                        99,
-                        94,
-                        90,
-                        82,
-                        79,
-                        67,
-                        67,
-                        51,
-                        49,
-                        47,
-                        39,
-                        38,
-                        38,
-                        35,
-                        18
-                    ],
-                    backgroundColor: [
-                        'rgba(247 221 221 1)',
-                        'rgba(247 176 176 1)',
-                        'rgba(246 110 110 1)',
-                        'rgba(250 66 66 1)',
-                        'rgba(194 25 25 1)',
-                    ]
-                }]
-            }
-        }
-    }
-  render() {
+const data = [
+  {
+    name: "$",
+    Number: 4,
+    amt: 2400
+  },
+  {
+    name: "$$",
+    Number: 31,
+    amt: 2210
+  },
+  {
+    name: "$$$",
+    Number: 64,
+    amt: 2290
+  },
+  {
+    name: "$$$$",
+    Number: 20,
+    amt: 2000
+  }
+];
+
+const getIntroOfPage = label => {
+  if (label === "$") {
+    return "Average rating: 4.15";
+  }
+  if (label === "$$") {
+    return "Average rating: 4.19";
+  }
+  if (label === "$$$") {
+    return "Average rating: 4.19";
+  }
+  if (label === "$$$$") {
+    return "Average rating: 4.16";
+  }
+};
+
+const getInfo = label => {
+  if (label === "$") {
+    return "Average price: 188 ₹";
+  }
+  if (label === "$$") {
+    return "Average price: 734 ₹";
+  }
+  if (label === "$$$") {
+    return "Average price: 1455 ₹";
+  }
+  if (label === "$$$$") {
+    return "Average price: 2990 ₹";
+  }
+};
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active) {
     return (
-      <div className="chart__wrap">
-       <Bar data={this.state.chartData}
-       options={{maintainAspectRatio: false}}
-       />
+      <div className="custom-tooltip">
+        <p className="label">{`Number of Resturants : ${payload[0].value}`}</p>
+        <p className="intro">{getIntroOfPage(label)}</p>
+        <p className="desc">{getInfo(label)}</p>
       </div>
     );
   }
+
+  return null;
+};
+
+export default class Example extends PureComponent {
+  static jsfiddleUrl = "https://jsfiddle.net/alidingling/30763kr7/";
+
+  render() {
+    return (
+      <BarChart
+        width={1200}
+        height={500}
+        data={data}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5
+        }}
+      >
+        <CartesianGrid strokeDasharray="5 5" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip content={<CustomTooltip />} />
+        {/* <Legend /> */}
+        <Bar dataKey="Number" fill="#AB9050" />
+      </BarChart>
+    );
+  }
 }
-
-// Three cities, most popular cuisine types, from there we'll filter
-// Through highest ratings, most reviews
-
-
-// Cities, Cuisines by Most Ratings (Optional:: Toggle for Lowest ratings)
